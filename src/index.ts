@@ -1,5 +1,5 @@
 import Pocketbase, { BaseAuthStore } from 'pocketbase';
-import React from 'react';
+import React, { useCallback } from 'react';
 
 type PocketbaseProviderProps = {
   client: Pocketbase;
@@ -30,8 +30,17 @@ function usePocketbaseClient() {
       'usePocketbaseClient must be used within a PocketbaseProvider',
     );
   }
+  const setAuthStore = useCallback(
+    (authStore: BaseAuthStore) => {
+      context.authStore = authStore;
+    },
+    [context],
+  );
 
-  return context;
+  return {
+    client: context,
+    setAuthStore,
+  };
 }
 
 export { PocketbaseProvider, usePocketbaseClient, useCreatePocketbase };

@@ -6,6 +6,9 @@ declare type PocketbaseProviderProps = {
 };
 declare function useCreatePocketbase(pocketbaseUrl: string, authStore?: BaseAuthStore | null, lang?: string): Pocketbase;
 declare function PocketbaseProvider({ children, client }: PocketbaseProviderProps): React.FunctionComponentElement<React.ProviderProps<Pocketbase | null>>;
-declare function usePocketbaseClient(): Pocketbase;
+declare function usePocketbaseClient(): {
+    client: Pocketbase;
+    setAuthStore: (authStore: BaseAuthStore) => void;
+};
 export { PocketbaseProvider, usePocketbaseClient, useCreatePocketbase };
 //# sourceMappingURL=index.d.ts.map
