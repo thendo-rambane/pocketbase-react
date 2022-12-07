@@ -24,8 +24,7 @@
     ".": {
       "import": "./dist/pocketbase-react.es.js",
       "require": "./dist/pocketbase-react.umd.js"
-    },
-    "./dist/style.css": "./dist/style.css"
+    }
   },
   "main": "./dist/pocketbase-react.umd.js",
   "module": "./dist/pocketbase-react.es.js",
