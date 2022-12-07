@@ -1,18 +1,18 @@
 import c from "pocketbase";
 import o from "react";
-function i(e, t, r) {
-  return new c(e, t, r);
+function a(e, t, n) {
+  return new c(e, t, n);
 }
-const n = o.createContext(null);
-function a({ children: e, client: t }) {
+const r = o.createContext(null);
+function i({ children: e, client: t }) {
   return o.createElement(
-    n.Provider,
+    r.Provider,
     { value: t },
     e
   );
 }
 function P() {
-  const e = o.useContext(n);
+  const e = o.useContext(r);
   if (e === null)
     throw new Error(
       "usePocketbaseClient must be used within a PocketbaseProvider"
@@ -20,7 +20,7 @@ function P() {
   return e;
 }
 export {
-  a as PocketbaseProvider,
-  i as usePocketbase,
+  i as PocketbaseProvider,
+  a as useCreatePocketbase,
   P as usePocketbaseClient
 };
