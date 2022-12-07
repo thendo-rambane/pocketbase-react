@@ -19,9 +19,9 @@
     "declarationMap": true,
     "baseUrl": ".",
     "paths": {
-      "react-vite-library": ["src/component/index.ts"]
+      "pocketbase-react": ["src/index.ts"]
     },
-    "typeRoots": ["node_modules/@types", "src/component/index.d.ts"]
+    "typeRoots": ["node_modules/@types", "src/index.d.ts"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

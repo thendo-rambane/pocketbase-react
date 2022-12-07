@@ -1,3 +1,7 @@
-import createPocketbase from './createPocketbase';
+import {
+  usePocketbase,
+  usePocketbaseClient,
+  PocketbaseProvider,
+} from './createPocketbase';
 
-export { createPocketbase };
+export { usePocketbase, usePocketbaseClient, PocketbaseProvider };

@@ -1,3 +1,3 @@
-import createPocketbase from './createPocketbase';
-export { createPocketbase };
+import { usePocketbase, usePocketbaseClient, PocketbaseProvider } from './createPocketbase';
+export { usePocketbase, usePocketbaseClient, PocketbaseProvider };
 //# sourceMappingURL=index.d.ts.map

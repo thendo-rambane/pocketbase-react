@@ -1,35 +1,26 @@
-import i from "pocketbase";
-import t from "react";
-function k(o, n, r) {
-  function s() {
-    return new i(
-      o,
-      n,
-      r
-    );
-  }
-  const c = t.createContext(
-    new i(
-      o,
-      n,
-      r
-    )
+import c from "pocketbase";
+import o from "react";
+function i(e, t, r) {
+  return new c(e, t, r);
+}
+const n = o.createContext(null);
+function a({ children: e, client: t }) {
+  return o.createElement(
+    n.Provider,
+    { value: t },
+    e
   );
-  function u({ children: e, client: P }) {
-    return t.createElement(c.Provider, { value: P }, e);
-  }
-  function a() {
-    const e = t.useContext(c);
-    if (e === void 0)
-      throw new Error("usePocketbaseClient must be used within a PocketbaseProvider");
-    return e;
-  }
-  return {
-    PocketbaseProvider: u,
-    usePocketbaseClient: a,
-    usePocketbase: s
-  };
+}
+function P() {
+  const e = o.useContext(n);
+  if (e === null)
+    throw new Error(
+      "usePocketbaseClient must be used within a PocketbaseProvider"
+    );
+  return e;
 }
 export {
-  k as createPocketbase
+  a as PocketbaseProvider,
+  i as usePocketbase,
+  P as usePocketbaseClient
 };
